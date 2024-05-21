@@ -39,23 +39,21 @@
       "max": 5,
       "min": 1
     },
+    "amortecimento": {
+      "type": "integer",
+      "min": 1,
+      "max": 5
+    },
     "photo": {
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": [
-        "images"
-      ]
+      "allowedTypes": ["images"]
     },
     "category": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::category.category"
-    },
-    "amortecimento": {
-      "type": "integer",
-      "min": 1,
-      "max": 5
     }
   }
 }
