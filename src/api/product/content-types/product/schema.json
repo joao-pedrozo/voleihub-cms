@@ -51,6 +51,11 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::category.category"
+    },
+    "amortecimento": {
+      "type": "integer",
+      "min": 1,
+      "max": 5
     }
   }
 }
