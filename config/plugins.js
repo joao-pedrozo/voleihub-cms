@@ -1,7 +1,7 @@
 module.exports = () => ({
   upload: {
     config: {
-      provider: "strapi-provider-upload-provider",
+      // provider: "strapi-provider-upload-provider",
     },
   },
 });
