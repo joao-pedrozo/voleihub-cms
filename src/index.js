@@ -39,37 +39,30 @@ module.exports = {
    * run jobs, or perform some special logic.
    */
   bootstrap({ strapi }) {
-    console.log(111);
-
-    if (process.env.NODE_ENV === "production") {
-      console.log(222);
-
-      const sourceDir = path.join("/", "uploads");
-      const destDir = path.join(__dirname, "public", "uploads");
-
-      copyUploadsFolder({ sourceDir, destDir });
-
-      strapi.db.lifecycles.subscribe({
-        models: ["plugin::upload.file"],
-        async afterCreate() {
-          const sourceDir = path.join(__dirname, "public", "uploads");
-          const destDir = path.join("/", "uploads");
-
-          copyUploadsFolder({ sourceDir, destDir });
-        },
-        async afterUpdate() {
-          const sourceDir = path.join(__dirname, "public", "uploads");
-          const destDir = path.join("/", "uploads");
-
-          copyUploadsFolder({ sourceDir, destDir });
-        },
-        async afterDelete() {
-          const sourceDir = path.join(__dirname, "public", "uploads");
-          const destDir = path.join("/", "uploads");
-
-          copyUploadsFolder({ sourceDir, destDir });
-        },
-      });
-    }
+    // console.log(111);
+    // if (process.env.NODE_ENV === "production") {
+    //   console.log(222);
+    //   const sourceDir = path.join("/", "uploads");
+    //   const destDir = path.join(__dirname, "public", "uploads");
+    //   copyUploadsFolder({ sourceDir, destDir });
+    //   strapi.db.lifecycles.subscribe({
+    //     models: ["plugin::upload.file"],
+    //     async afterCreate() {
+    //       const sourceDir = path.join(__dirname, "public", "uploads");
+    //       const destDir = path.join("/", "uploads");
+    //       copyUploadsFolder({ sourceDir, destDir });
+    //     },
+    //     async afterUpdate() {
+    //       const sourceDir = path.join(__dirname, "public", "uploads");
+    //       const destDir = path.join("/", "uploads");
+    //       copyUploadsFolder({ sourceDir, destDir });
+    //     },
+    //     async afterDelete() {
+    //       const sourceDir = path.join(__dirname, "public", "uploads");
+    //       const destDir = path.join("/", "uploads");
+    //       copyUploadsFolder({ sourceDir, destDir });
+    //     },
+    //   });
+    // }
   },
 };
